@@ -1,5 +1,10 @@
-number = float(input())
+# pattern :: heart
 
-while number < 1 or number > 100:
-  number = float(input())
-print(f'The number {number} is between 1 and 100')
+number = int(input(''))
+
+for column in range(number + 1):
+    for rows in range(number - column):
+        print(' ', end='')
+    for row in range(2 * column + 1):
+        print('*', end='')
+    print()
