@@ -1,8 +1,9 @@
+
 choose = input('Choose a data type to perform operations on:\n'
                '1. String\n'
                '2. Numbers\n'
                '3. Booleans\n'
-               '4. Additiona Data Types (List, Tuple, Dictionary)\n')
+               '4. Additional Data Types (List, Tuple, Dictionary)\n')
 
 if choose == '1':
     choose_string = input('You choose string\nGive me your text: ')
@@ -43,7 +44,8 @@ elif choose == '3':
         is_python_fun = False
 
     else:
-        print('Your choice is wrong!\nProgram exit!')
+        print('Your choice is wrong!\nDefault option is set to True!')
+        declare_python_fun = True
     declare_is_sun = input('Is sunny day? Choose between:\n1. True\n2. False\n')
 
     if declare_is_sun == '1':
@@ -51,20 +53,14 @@ elif choose == '3':
     elif declare_is_sun == '2':
         is_sunny = False
     else:
-        print('Your choice is wrong!\nProgram exit!')
-
-    if is_python_fun and is_sunny:
-        print('Python is fun?:', is_python_fun)
-        print('Is sunny day?', is_sunny)
-    elif is_python_fun:
-        print('Python is fun?:', is_python_fun)
-        print('Is sunny day?', is_sunny)
-    elif is_sunny:
-        print('Python is fun?:', is_python_fun)
-        print('Is sunny day?', is_sunny)
+        print('Your choice is wrong!\nDefault option is set to True!')
+        declare_is_sun = True
+    print('Python is fun?:', is_python_fun)
+    print('Is sunny day?', is_sunny)
 
 elif choose == '4':
-    specific_choice = input('You choose additional data types.\nPlease, choose between:\n1. List\n2. Tuple\n3. Dictionary\n')
+    specific_choice = input('You choose additional data types.\nPlease, choose between:\n1. List\n2. Tuple\n3. '
+                            'Dictionary\n')
     if specific_choice == '1':
         appends = 4
         lst = []
@@ -77,4 +73,3 @@ elif choose == '4':
                 print()
         print(lst)
         print('Your list is finished!')
-
